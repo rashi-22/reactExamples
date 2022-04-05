@@ -2,7 +2,7 @@ const userInitial={
     empno:1,
     name:'Rashi',
     email: 'rashi@gmail.com',
-    department:['IT','Management']
+    department:'IT'
 }
 
 const userReducer=(state=userInitial,action)=>{
@@ -14,9 +14,10 @@ const userReducer=(state=userInitial,action)=>{
                 name:action.payload
             }
         }
-        case 'USER_DETAILS':{
+        case 'UPDATE_DEPT':{
             return {
-                ...state
+                ...state,
+                department:action.payload
             }
         }
         default:

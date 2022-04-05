@@ -1,5 +1,5 @@
 const UPDATE_NAME='UPDATE_NAME'
-const USER_DETAILS='USER_DETAILS'
+const UPDATE_DEPT='UPDATE_DEPT'
 
 export const updateName=(name)=>{
 
@@ -10,8 +10,9 @@ export const updateName=(name)=>{
 
 }
 
-export const getUserDetails=()=>{
+export const updateDept=(dept)=>{
     return ({
-        type: USER_DETAILS
+        type: UPDATE_DEPT,
+        payload:dept
     });
 }
